@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card 2</title>
+  <style>
+    body {
+      background: #f3f6fa;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .profile-card {
+      max-width: 380px;
+      margin: 56px auto 0 auto;
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 6px 32px 0 rgba(30,41,59,0.10);
+      border: 1px solid #e0e7ef;
+      padding: 40px 24px 32px 24px;
+      text-align: center;
+    }
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 16px auto;
+      display: block;
+      border: 4px solid #e0e7ef;
+      background: #e0e7ef;
+    }
+    .profile-name {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 2px;
+      margin-top: 0;
+    }
+    .profile-role {
+      color: #e67e22;
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .profile-desc {
+      color: #475569;
+      font-size: 1rem;
+      margin-bottom: 22px;
+      margin-top: 0;
+    }
+    .profile-skills {
+      margin-bottom: 18px;
+    }
+    .profile-skills span {
+      display: inline-block;
+      background: #f1f5f9;
+      color: #2563eb;
+      font-size: 0.92rem;
+      font-weight: 500;
+      border-radius: 6px;
+      padding: 4px 12px;
+      margin: 0 4px 6px 0;
+    }
+    .profile-socials {
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    .profile-socials a {
+      display: inline-block;
+      margin: 0 8px;
+      text-decoration: none;
+      color: #64748b;
+      font-size: 1.5rem;
+      transition: color 0.2s;
+    }
+    .profile-socials a:hover {
+      color: #e67e22;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile" class="profile-img">
+    <div class="profile-name">Jessica Lee</div>
+    <div class="profile-role">Lead Frontend Developer</div>
+    <div class="profile-desc">Passionate about building beautiful web interfaces. 10+ years in React, Vue, and UI engineering.</div>
+    <div class="profile-skills">
+      <span>React</span>
+      <span>Vue</span>
+      <span>UI/UX</span>
+      <span>Figma</span>
+      <span>Accessibility</span>
+    </div>
+    <div class="profile-socials">
+      <a href="#" title="GitHub" aria-label="GitHub">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#e0e7ef"/><path d="M12 2C6.48 2 2 6.58 2 12.18C2 16.62 5.13 20.26 9.26 21.5C9.86 21.6 10.08 21.26 10.08 20.96C10.08 20.7 10.07 20.09 10.07 19.36C7.73 19.91 7.18 18.36 7.18 18.36C6.64 17.13 5.87 16.81 5.87 16.81C4.8 16.09 5.95 16.11 5.95 16.11C7.13 16.2 7.73 17.36 7.73 17.36C8.8 19.13 10.56 18.62 11.26 18.34C11.36 17.59 11.66 17.09 11.99 16.81C9.73 16.53 7.37 15.51 7.37 11.97C7.37 10.97 7.74 10.16 8.36 9.54C8.26 9.26 7.93 8.23 8.46 6.89C8.46 6.89 9.23 6.62 10.07 7.47C10.8 7.26 11.6 7.18 12.4 7.18C13.2 7.18 14 7.26 14.73 7.47C15.57 6.62 16.34 6.89 16.34 6.89C16.87 8.23 16.54 9.26 16.44 9.54C17.06 10.16 17.43 10.97 17.43 11.97C17.43 15.52 15.07 16.53 12.81 16.81C13.22 17.15 13.59 17.81 13.59 18.86C13.59 20.13 13.58 20.97 13.58 20.96C13.58 21.26 13.8 21.6 14.4 21.5C18.53 20.26 21.66 16.62 21.66 12.18C21.66 6.58 17.18 2 12 2Z" fill="#64748b"/></svg>
+      </a>
+      <a href="#" title="Dribbble" aria-label="Dribbble">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#e0e7ef"/><path d="M12 2C6.48 2 2 6.58 2 12.18C2 16.62 5.13 20.26 9.26 21.5C9.86 21.6 10.08 21.26 10.08 20.96C10.08 20.7 10.07 20.09 10.07 19.36C7.73 19.91 7.18 18.36 7.18 18.36C6.64 17.13 5.87 16.81 5.87 16.81C4.8 16.09 5.95 16.11 5.95 16.11C7.13 16.2 7.73 17.36 7.73 17.36C8.8 19.13 10.56 18.62 11.26 18.34C11.36 17.59 11.66 17.09 11.99 16.81C9.73 16.53 7.37 15.51 7.37 11.97C7.37 10.97 7.74 10.16 8.36 9.54C8.26 9.26 7.93 8.23 8.46 6.89C8.46 6.89 9.23 6.62 10.07 7.47C10.8 7.26 11.6 7.18 12.4 7.18C13.2 7.18 14 7.26 14.73 7.47C15.57 6.62 16.34 6.89 16.34 6.89C16.87 8.23 16.54 9.26 16.44 9.54C17.06 10.16 17.43 10.97 17.43 11.97C17.43 15.52 15.07 16.53 12.81 16.81C13.22 17.15 13.59 17.81 13.59 18.86C13.59 20.13 13.58 20.97 13.58 20.96C13.58 21.26 13.8 21.6 14.4 21.5C18.53 20.26 21.66 16.62 21.66 12.18C21.66 6.58 17.18 2 12 2Z" fill="#64748b"/></svg>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

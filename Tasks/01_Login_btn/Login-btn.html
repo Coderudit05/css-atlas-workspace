@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Login Form</title>
+  <style>
+    body {
+      background: #f8fafc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 40px auto 0 auto;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px 0 rgba(30,41,59,0.08);
+      padding: 32px 24px 24px 24px;
+    }
+    .container h1 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #0f172a;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .container p.desc {
+      color: #475569;
+      margin-bottom: 24px;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    label {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      box-sizing: border-box;
+      margin-bottom: 0;
+      transition: border 0.2s;
+    }
+    input[type="email"]:focus, input[type="password"]:focus {
+      border-color: #6366f1;
+    }
+    .remember-row {
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+      display: block;
+    }
+    .remember-row label {
+      display: inline;
+      margin-left: 6px;
+      color: #64748b;
+      font-weight: 400;
+    }
+    .forgot-link {
+      float: right;
+      font-size: 0.95rem;
+      color: #6366f1;
+      text-decoration: none;
+      margin-top: -22px;
+      margin-bottom: 18px;
+      transition: color 0.2s;
+    }
+    .forgot-link:hover {
+      color: #4338ca;
+    }
+    .submit-btn {
+      width: 100%;
+      background: #6366f1;
+      color: #fff;
+      padding: 14px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .submit-btn:hover {
+      background: #4338ca;
+    }
+    .or-divider {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin: 32px 0 12px 0;
+    }
+    .social-row {
+      margin: 0 auto 0 auto;
+      text-align: center;
+    }
+    .social-btn {
+      display: inline-block;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 16px;
+      margin: 0 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+      vertical-align: middle;
+    }
+    .social-btn:hover {
+      background: #f1f5f9;
+    }
+    .social-btn img {
+      width: 20px;
+      height: 20px;
+      display: block;
+    }
+    .signup-row {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+    .signup-row a {
+      color: #6366f1;
+      font-weight: 500;
+      text-decoration: none;
+      margin-left: 4px;
+      transition: color 0.2s;
+    }
+    .signup-row a:hover {
+      color: #4338ca;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sign in to your business account</h1>
+    <p class="desc">Access your dashboard, manage clients, and grow your business with our secure platform.</p>
+    <form>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" required aria-required="true" placeholder="you@business.com">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required aria-required="true" placeholder="Enter your password">
+      </div>
+      <div class="remember-row">
+        <input id="remember-me" name="remember-me" type="checkbox" aria-checked="false">
+        <label for="remember-me">Remember me</label>
+      </div>
+      <a href="#" class="forgot-link">Forgot password?</a>
+      <button type="submit" class="submit-btn" aria-label="Sign in to your account">Sign in</button>
+    </form>
+    <div class="or-divider">or sign in with</div>
+    <div class="social-row">
+      <button type="button" class="social-btn" aria-label="Sign in with Google">
+        <img src="https://landinggo.com/assets/img/stock/login/google.svg" alt="Google" loading="lazy">
+      </button>
+      <button type="button" class="social-btn" aria-label="Sign in with Facebook">
+        <img src="https://landinggo.com/assets/img/stock/login/facebook.svg" alt="Facebook" loading="lazy">
+      </button>
+      <button type="button" class="social-btn" aria-label="Sign in with LinkedIn">
+        <img src="https://landinggo.com/assets/img/stock/login/linkedin.svg" alt="LinkedIn" loading="lazy">
+      </button>
+    </div>
+    <div class="signup-row">
+      Don't have an account?
+      <a href="#">Create one</a>
+    </div>
+  </div>
+</body>
+</html>
