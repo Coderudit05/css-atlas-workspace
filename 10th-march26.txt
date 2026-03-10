@@ -1,0 +1,10 @@
+Today's Agenda:
+
+1. CSS Colors
+2. CSS Backgrounds
+3. CSS Gradients
+4. CSS Typography
+5. Google Fonts Integration
+
+// Next session : Box Model
+
