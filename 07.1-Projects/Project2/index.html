@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 2 – Pricing Card</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Manrope:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* ── CSS Concepts Used ──────────────────────────────
+       ✅ Box Model   : margin, padding, border, width/height
+       ✅ Typography  : font-family, font-size, font-weight, line-height
+       ✅ Backgrounds : solid colors, gradient, background-clip
+       ✅ Units       : px, rem, em, %
+       ✅ Selectors   : class, element, child (li), :hover, :last-child
+    ──────────────────────────────────────────────────── */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 2rem;
+
+            background-color: #f0f4f8;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        /* ── CARD BASE ── */
+        .card {
+            width: 280px;
+            border-radius: 16px;
+            padding: 2rem;
+            /* Box Model */
+            background-color: #ffffff;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+
+        }
+
+        /* ── POPULAR / HIGHLIGHTED CARD ── */
+        .card.popular {
+            background: linear-gradient(160deg, #0f2027, #203a43, #2c5364);
+            border-color: transparent;
+            color: #fff;
+        }
+
+        /* ── BADGE ── */
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            /* Box Model */
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+
+            background: linear-gradient(90deg, #f7971e, #ffd200);
+            color: #1a1a1a;
+        }
+
+        .card:not(.popular) .badge {
+            background: #eef2ff;
+            color: #4f46e5;
+        }
+
+        /* ── PLAN NAME ── */
+        .plan-name {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #94a3b8;
+            margin-bottom: 0.5rem;
+        }
+
+        .popular .plan-name {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ── PRICE ── */
+        .price {
+            font-family: 'Space Mono', monospace;
+            /* Typography */
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+            color: #0f172a;
+            margin-bottom: 0.3rem;
+        }
+
+        .popular .price {
+            color: #ffffff;
+        }
+
+        .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #94a3b8;
+        }
+
+        /* ── DESCRIPTION ── */
+        .desc {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            /* Box Model */
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .popular .desc {
+            color: rgba(255, 255, 255, 0.55);
+            border-bottom-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* ── FEATURES LIST ── */
+        .features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        /* Element + child selector */
+        .features li {
+            font-size: 0.88rem;
+            padding: 0.5rem 0;
+            /* Box Model */
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #475569;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .popular .features li {
+            color: rgba(255, 255, 255, 0.75);
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* :last-child selector */
+        .features li:last-child {
+            border-bottom: none;
+        }
+
+        .check {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #43e97b, #38f9d7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.6rem;
+            flex-shrink: 0;
+        }
+
+        /* ── BUTTON ── */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 0.85rem;
+            /* Box Model */
+            border-radius: 10px;
+            border: 2px solid #4f46e5;
+
+            background-color: transparent;
+            color: #4f46e5;
+
+            font-family: 'Manrope', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #4f46e5;
+            color: #ffffff;
+        }
+
+        .popular .btn {
+            background: linear-gradient(90deg, #f7971e, #ffd200);
+            border-color: transparent;
+            color: #1a1a1a;
+        }
+
+        .popular .btn:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- Card 2: Pro (Popular) -->
+    <div class="card popular">
+        <div class="badge">⭐ Most Popular</div>
+        <p class="plan-name">Pro</p>
+        <p class="price">₹499 <span>/ mo</span></p>
+        <p class="desc">For professionals who need more power and flexibility.</p>
+        <ul class="features">
+            <li><span class="check">✓</span> Unlimited Projects</li>
+            <li><span class="check">✓</span> 20 GB Storage</li>
+            <li><span class="check">✓</span> Priority Support</li>
+            <li><span class="check">✓</span> Advanced Analytics</li>
+        </ul>
+        <button class="btn">Upgrade Now</button>
+    </div>
+
+
+
+</body>
+
+</html>

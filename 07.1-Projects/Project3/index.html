@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 3 – Blog Preview Card</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* ── CSS Concepts Used ──────────────────────────────
+       ✅ Box Model   : margin, padding, border, border-radius, overflow
+       ✅ Typography  : font-family, font-size, font-weight, line-height,
+                        letter-spacing, text-overflow, white-space, -webkit-line-clamp
+       ✅ Gradients   : linear-gradient overlay on image
+       ✅ Backgrounds : background-image (via gradient), background-size/position
+       ✅ Units       : px, rem, %, vh
+       ✅ Selectors   : class, element, descendant, :hover, ::after
+    ──────────────────────────────────────────────────── */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding: 3rem 2rem;
+
+            background-color: #faf9f6;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* ── CARD ── */
+        .card {
+            width: 340px;
+            border-radius: 14px;
+            overflow: hidden;
+            /* Box Model: hides overflowing children */
+            background-color: #ffffff;
+            border: 1px solid #e8e4dc;
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ── IMAGE AREA (using gradient as fake image) ── */
+        .card-image {
+            height: 190px;
+            position: relative;
+
+            /* Background gradient as image placeholder */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Each card gets a different gradient "thumbnail" */
+        .card:nth-child(1) .card-image {
+            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .card:nth-child(2) .card-image {
+            background-image: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .card:nth-child(3) .card-image {
+            background-image: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        /* Dark overlay at the bottom of image using ::after pseudo-element */
+        .card-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent);
+        }
+
+        /* ── CATEGORY TAG (sits on the image) ── */
+        .tag {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1;
+
+            padding: 0.3rem 0.75rem;
+            /* Box Model */
+            border-radius: 50px;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            /* Typography */
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        /* ── CARD BODY ── */
+        .card-body {
+            padding: 1.5rem;
+            /* Box Model */
+        }
+
+        /* ── META: Date + Read Time ── */
+        .meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: #a09880;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.75rem;
+        }
+
+        .dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background-color: #c4bdb0;
+        }
+
+        /* ── TITLE ── */
+        .title {
+            font-family: 'Lora', serif;
+            /* Typography: serif font */
+            font-size: 1.15rem;
+            font-weight: 600;
+            line-height: 1.45;
+            /* Typography */
+            color: #1a1814;
+            margin-bottom: 0.75rem;
+
+            /* Clamp to 2 lines */
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* ── EXCERPT ── */
+        .excerpt {
+            font-size: 0.875rem;
+            line-height: 1.7;
+            /* Typography */
+            color: #6b6456;
+            margin-bottom: 1.4rem;
+
+            /* Clamp to 3 lines */
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* ── FOOTER: Author + Read More ── */
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1rem;
+            /* Box Model */
+            border-top: 1px solid #f0ebe3;
+        }
+
+        /* ── AUTHOR ── */
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            /* Box Model: circle */
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        .author-name {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #3d3629;
+        }
+
+        /* ── READ MORE LINK ── */
+        .read-more {
+            font-size: 0.78rem;
+            font-weight: 500;
+            color: #7c6f5c;
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+
+            transition: color 0.2s ease;
+        }
+
+        /* Descendant selector */
+        .card:hover .read-more {
+            color: #1a1814;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Blog Card 1 -->
+    <div class="card">
+        <div class="card-image">
+            <span class="tag">Design</span>
+        </div>
+        <div class="card-body">
+            <div class="meta">
+                <span>June 12, 2025</span>
+                <span class="dot"></span>
+                <span>5 min read</span>
+            </div>
+            <h2 class="title">Why White Space is the Most Powerful Tool in Design</h2>
+            <p class="excerpt">
+                Designers often focus on what to add — but the real magic happens in what you leave out.
+                White space isn't empty; it's breathing room for your content to shine.
+            </p>
+            <div class="card-footer">
+                <div class="author">
+                    <div class="avatar">✍️</div>
+                    <span class="author-name">Priya Sharma</span>
+                </div>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Card 2 -->
+    <div class="card">
+        <div class="card-image">
+            <span class="tag">CSS</span>
+        </div>
+        <div class="card-body">
+            <div class="meta">
+                <span>July 3, 2025</span>
+                <span class="dot"></span>
+                <span>8 min read</span>
+            </div>
+            <h2 class="title">Mastering the CSS Box Model Once and for All</h2>
+            <p class="excerpt">
+                Every element on a webpage is a box — understanding margin, border, padding and
+                content will change how you see and build layouts forever.
+            </p>
+            <div class="card-footer">
+                <div class="author">
+                    <div class="avatar">🎨</div>
+                    <span class="author-name">Rahul Verma</span>
+                </div>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="card">
+        <div class="card-image">
+            <span class="tag">Typography</span>
+        </div>
+        <div class="card-body">
+            <div class="meta">
+                <span>Aug 20, 2025</span>
+                <span class="dot"></span>
+                <span>6 min read</span>
+            </div>
+            <h2 class="title">Choosing the Right Font Pairing for Your Website</h2>
+            <p class="excerpt">
+                A serif display font with a clean sans-serif body creates hierarchy and rhythm.
+                Learn the rules — and when to break them — for unforgettable typography.
+            </p>
+            <div class="card-footer">
+                <div class="author">
+                    <div class="avatar">🖋️</div>
+                    <span class="author-name">Ananya Joshi</span>
+                </div>
+                <a href="#" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

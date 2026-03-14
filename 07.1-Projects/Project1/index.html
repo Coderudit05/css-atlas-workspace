@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 1 – Profile Card</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* ── CSS Concepts Used ──────────────────────────────
+       ✅ Box Model   : margin, padding, border, border-radius
+       ✅ Typography  : font-family, font-size, line-height, letter-spacing
+       ✅ Gradients   : linear-gradient background
+       ✅ Backgrounds : background-color, background-image
+       ✅ Units       : px, rem, %
+       ✅ Selectors   : element, class, pseudo-class (:hover)
+    ──────────────────────────────────────────────────── */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        /* ── THE CARD ── */
+        .card {
+            width: 320px;
+
+            /* Box Model */
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+
+            /* Background */
+            background-color: rgba(255, 255, 255, 0.06);
+
+            text-align: center;
+
+            /* Smooth hover transition */
+        }
+
+        /* Pseudo-class selector :hover */
+        .card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ── AVATAR ── */
+        .avatar {
+            width: 90px;
+            height: 90px;
+
+            /* Box Model: margin auto = center */
+            margin: 0 auto 1.2rem auto;
+            border-radius: 50%;
+
+            /* Gradient border trick */
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 2.2rem;
+        }
+
+        /* ── NAME ── */
+        .name {
+            font-family: 'Playfair Display', serif;
+            /* Typography */
+            font-size: 1.5rem;
+            letter-spacing: 0.02em;
+            /* Typography */
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+        }
+
+        /* ── ROLE ── */
+        .role {
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+            /* Typography */
+            text-transform: uppercase;
+            color: #f093fb;
+            margin-bottom: 1.4rem;
+        }
+
+        /* ── BIO ── */
+        .bio {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            /* Typography */
+            color: rgba(255, 255, 255, 0.65);
+            margin-bottom: 1.8rem;
+
+            /* Box Model: padding on sides */
+            padding: 0 0.5rem;
+        }
+
+        /* ── STATS ROW ── */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1.8rem;
+
+            /* Box Model: padding + border */
+            padding: 1rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #ffffff;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            display: block;
+            margin-top: 0.2rem;
+        }
+
+        /* ── FOLLOW BUTTON ── */
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 2rem;
+            /* Box Model */
+            border-radius: 50px;
+            border: none;
+
+            /* Gradient background */
+            background: linear-gradient(90deg, #f093fb, #f5576c);
+
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            color: #fff;
+
+            cursor: pointer;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        /* Pseudo-class :hover on button */
+        .btn:hover {
+            opacity: 0.85;
+            transform: scale(1.04);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="avatar">🧑‍💻</div>
+
+        <h2 class="name">Aryan Mehta</h2>
+        <p class="role">UI / UX Designer</p>
+
+        <p class="bio">
+            Crafting clean interfaces and delightful experiences.
+            Loves coffee, dark mode, and pixel-perfect layouts.
+        </p>
+
+        <div class="stats">
+            <div>
+                <span class="stat-number">148</span>
+                <span class="stat-label">Projects</span>
+            </div>
+            <div>
+                <span class="stat-number">32k</span>
+                <span class="stat-label">Followers</span>
+            </div>
+            <div>
+                <span class="stat-number">519</span>
+                <span class="stat-label">Following</span>
+            </div>
+        </div>
+
+        <button class="btn">Follow</button>
+
+    </div>
+
+</body>
+
+</html>
