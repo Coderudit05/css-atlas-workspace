@@ -1,0 +1,2 @@
+1) block elements always takes full width whereas inline elements only takes as much width as they need.
+2) block elements can change the width and height of the element whereas inline elements cannot change the width and height of the element.

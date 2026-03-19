@@ -60,8 +60,34 @@ html,body{
     margin: 20px auto;
 }
 
+.status{
+    /* background-color: purple; */
+}
+
+.status .box{
+    /* background-color: aqua; */
+    height: 100px;
+    width: 80%;
+    margin: 0px auto;
+
+    text-align: center;
+
+    padding: 20px 0;
+    
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.status .box div{
+    display: inline-block;
+    /* background-color: green; */
+}
+
+
+
 .button-box{
     text-align: center;
+    padding: 20px;
 }
 
 .button-box button{
