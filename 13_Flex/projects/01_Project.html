@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .parent {
+            height: 100vh;
+            background-color: rgba(205, 92, 92, 0.51);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .parent .card {
+            height: 400px;
+            width: 300px;
+            border: 1px solid black;
+            box-shadow: 0px 0px 10px black;
+            border-radius: 10px;
+        }
+
+        .img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background-color: yellowgreen;
+
+            margin: 10px auto;
+
+            overflow: hidden;
+        }
+
+        .img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        h1{
+            text-align: center;
+            
+        }
+        .card p{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="parent">
+        <div class="card">
+
+            <div class="img">
+                <img src="https://images.unsplash.com/photo-1676745978646-c3e823202d67?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHJvaGl0JTIwc2hhbWF8ZW58MHx8MHx8fDA%3D"
+                    alt="">
+            </div>
+
+            <h1>Rohit Sharma</h1>
+            <p>Full Stack Developer</p>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

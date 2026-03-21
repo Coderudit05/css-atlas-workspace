@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+/*
+flex : by default it is row
+flex-direction : we can change the direction of flex from row to colum
+
+flex-direction : row -> justify-content -> main
+                        align-items -> cross
+
+flex-direction : column -> justify-content -> cross
+                        align-items -> main
+
+
+
+*/
+
+/* this is for only flex direction row */
+/* .parent{
+    display: flex;
+    height: 100vh;
+    background-color: aquamarine;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    
+    
+} */
+
+/* this is for only flex direction colum */
+.parent{
+    
+    height: 100vh;
+    background-color: aquamarine;
+    
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.box{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    background-color: yellowgreen;
+    font-size: 30px;
+    padding: 20px;
+
+    /* display: inline-block; */
+}
