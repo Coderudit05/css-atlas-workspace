@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+
+/* This is the code for navbar of our website */
+
+header{
+    /* background-color: yellowgreen; */
+}
+
+nav{
+    /* background-color: aquamarine; */
+    height: 60px;
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.nav-buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.nav-buttons button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+/* From here we are going to start code for hero section */
+
+.hero{
+    /* background-color: violet; */
+    
+    min-height: calc(100vh - 60px);
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.left,.right{
+    width: 50%;
+    height: 500px;
+}
+
+
+
+.left{
+    
+    padding: 80px 60px;
+}
+
+.left h1{
+    line-height: 50px;
+    font-size: 60px;
+    padding: 20px 0;
+}
+
+.left p{
+    padding: 20px 0;
+    font-size: larger;
+    width: 500px;
+}
+
+.left button{
+    width: fit-content;
+    background-color: #E85F19;
+}
+
+.right{
+
+}
+.right img{
+    height: 100%;
+    width: 100%;
+    
+    object-fit: cover;
+}
