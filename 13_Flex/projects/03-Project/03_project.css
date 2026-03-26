@@ -101,3 +101,108 @@ nav ul li a{
     
     object-fit: cover;
 }
+
+/* From here we are going to start services section */
+
+.services{
+    height: 100vh;
+    /* background-color: aquamarine; */
+    padding: 20px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-wrapper{
+    display: flex;
+    flex-direction: column;
+    /* background-color: yellowgreen; */
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+.service-wrapper h2{
+    font-size: 40px;
+}
+
+.service-wrapper h2 span{
+    color: #E85F19;
+}
+
+.service-wrapper p{
+    max-width: 450px;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.79);
+}
+
+
+.service-boxes{
+    height: 300px;
+    border: 1px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    padding: 20px 40px;
+}
+
+.service-boxes .box{
+    height: 250px;
+    width: 250px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px;
+    
+    gap: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.service-boxes .box span{
+    height: 70px;
+    width: 70px;
+    background-color: #E85F19;
+
+    position: absolute;
+    top: -5px;
+    left: -5px;
+
+    border-end-end-radius: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 10px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+    /* display: inline-block; */
+}
+
+.service-boxes .box span i{
+    font-size: larger;
+    
+}
+
+.service-boxes .box h3{
+    text-align: left;
+    margin-top: 40px;
+}
+.service-boxes .box p{
+    text-align: left;
+}
+
+.service-boxes .box a{
+    text-decoration: none;
+    color: #E85F19;
+}
