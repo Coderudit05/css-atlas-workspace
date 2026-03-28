@@ -1,21 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,body{
+html, body {
     height: 100%;
 }
 
 
 /* This is the code for navbar of our website */
 
-header{
+header {
     /* background-color: yellowgreen; */
 }
 
-nav{
+nav {
     /* background-color: aquamarine; */
     height: 60px;
     width: 90%;
@@ -27,24 +27,24 @@ nav{
     align-items: center;
 }
 
-nav ul{
+nav ul {
     display: flex;
     list-style: none;
     gap: 20px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: black;
     font-size: 20px;
 }
 
-.nav-buttons{
+.nav-buttons {
     display: flex;
     gap: 20px;
 }
 
-.nav-buttons button{
+.nav-buttons button {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
@@ -52,9 +52,9 @@ nav ul li a{
 
 /* From here we are going to start code for hero section */
 
-.hero{
+.hero {
     /* background-color: violet; */
-    
+
     min-height: calc(100vh - 60px);
 
     display: flex;
@@ -63,48 +63,47 @@ nav ul li a{
     padding: 20px;
 }
 
-.left,.right{
+.hero .left, .hero .right {
     width: 50%;
     height: 500px;
 }
 
 
 
-.left{
-    
+.hero .left {
+
     padding: 80px 60px;
 }
 
-.left h1{
+.left h1 {
     line-height: 50px;
     font-size: 60px;
     padding: 20px 0;
 }
 
-.left p{
+.left p {
     padding: 20px 0;
     font-size: larger;
     width: 500px;
 }
 
-.left button{
+.left button {
     width: fit-content;
     background-color: #E85F19;
 }
 
-.right{
+.right {}
 
-}
-.right img{
+.right img {
     height: 100%;
     width: 100%;
-    
+
     object-fit: cover;
 }
 
 /* From here we are going to start services section */
 
-.services{
+.services {
     height: 100vh;
     /* background-color: aquamarine; */
     padding: 20px 40px;
@@ -114,7 +113,7 @@ nav ul li a{
     justify-content: center;
 }
 
-.service-wrapper{
+.service-wrapper {
     display: flex;
     flex-direction: column;
     /* background-color: yellowgreen; */
@@ -123,15 +122,16 @@ nav ul li a{
 
     gap: 20px;
 }
-.service-wrapper h2{
+
+.service-wrapper h2 {
     font-size: 40px;
 }
 
-.service-wrapper h2 span{
+.service-wrapper h2 span {
     color: #E85F19;
 }
 
-.service-wrapper p{
+.service-wrapper p {
     max-width: 450px;
     text-align: center;
     text-transform: capitalize;
@@ -139,7 +139,7 @@ nav ul li a{
 }
 
 
-.service-boxes{
+.service-boxes {
     height: 300px;
     border: 1px solid black;
 
@@ -151,7 +151,7 @@ nav ul li a{
     padding: 20px 40px;
 }
 
-.service-boxes .box{
+.service-boxes .box {
     height: 250px;
     width: 250px;
     border: 1px solid black;
@@ -159,14 +159,14 @@ nav ul li a{
     flex-direction: column;
     justify-content: center;
     padding: 10px 20px;
-    
+
     gap: 5px;
     position: relative;
     overflow: hidden;
 }
 
 
-.service-boxes .box span{
+.service-boxes .box span {
     height: 70px;
     width: 70px;
     background-color: #E85F19;
@@ -185,24 +185,153 @@ nav ul li a{
     justify-content: center;
 
 
-
     /* display: inline-block; */
 }
 
-.service-boxes .box span i{
+.service-boxes .box span i {
     font-size: larger;
-    
+
 }
 
-.service-boxes .box h3{
+.service-boxes .box h3 {
     text-align: left;
     margin-top: 40px;
 }
-.service-boxes .box p{
+
+.service-boxes .box p {
     text-align: left;
 }
 
-.service-boxes .box a{
+.service-boxes .box a {
     text-decoration: none;
     color: #E85F19;
+}
+
+
+/* From here we are going to start the styling for the contact us section */
+
+.contact-us {
+    display: flex;
+    min-height: 100vh;
+
+    /* background-color: yellowgreen; */
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.contact-us .left{
+    /* border: 1px solid black; */
+    height: 500px;
+}
+
+.contact-us .left .img-box{
+    /* background-color: yellowgreen; */
+    height: 100%;
+    width: 100%;
+}
+
+.contact-us img{
+    height: 100%;
+    width: 100%;
+}
+.contact-us p{
+    max-width: 400px;
+}
+
+.contact-us .right{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 20px 0;
+}
+
+.contact-us .contact-box{
+}
+
+.contact-us .contact-box .box{
+    display: flex;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.contact-box .box span{
+    height: 50px;
+    width: 50px;
+    background-color: #E85F19;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.contact-us .buttons{
+    display: flex;
+    gap: 40px;
+}
+
+.contact-us .buttons #btn1{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #E85F19;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.contact-us .buttons #btn2{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    color: #E85F19;
+    border: 2px solid #E85F19;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* From here we are going to start code for the testimonials section */
+
+.testimonials{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.testimonials h1{
+    font-size: 50px;
+}
+
+.testimonials h1 span{
+    color: #E85F19;
+}
+
+.testimonials p{
+    max-width: 400px;
+    text-align: center;
+}
+
+.testimonials-box{
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+
+
+.testimonial{
+    height: 200px;
+    width: 300px;
+    border: 1px solid black;
 }
