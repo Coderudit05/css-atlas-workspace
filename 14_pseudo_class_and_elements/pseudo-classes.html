@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: aquamarine;
+            cursor: pointer;
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+
+        /* button:hover{
+            background-color: aquamarine;
+            box-shadow: 0 0 10px aquamarine;
+        } */
+
+        /* button:active{
+            background-color: blueviolet;
+        } */
+        /* button:focus{
+            background-color: blueviolet;
+        } */
+        /* a:visited{
+            background-color: red;
+        } */
+
+        /* Case 1 */
+        /* ul li{
+            color: red;
+        } */
+
+        /* Case 2 */
+        /* ul .item{
+            color: red;
+        } */
+
+        /* Case 3 */
+        ul li:nth-child(3n){
+            color: red;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- <button>Hover Me</button> -->
+    <!-- <a href="#">Click me</a> -->
+
+
+    <ul>
+        <li>Home</li>
+        <li class="item">About</li>
+        <li>Contact us</li>
+        <li class="item">Testimonials</li>
+        <li>More...</li>
+        <li>More...</li>
+        <li>More...</li>
+        <li>More...</li>
+        <li>More...</li>
+        <li>More...</li>
+        <li>More...</li>
+        <li>More...</li>
+    </ul>
+    
+</body>
+</html>

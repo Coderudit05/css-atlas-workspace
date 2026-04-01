@@ -335,3 +335,65 @@ nav ul li a {
     width: 300px;
     border: 1px solid black;
 }
+
+
+/* From here we are going to start our footer section */
+
+footer{
+    background-color: #FBECE6;
+    height: 50vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    padding: 50px 0;
+
+    position: relative;
+}
+
+footer .box{
+    height: 80px;
+    width: 80%;
+    background-color: #E85F19;
+    position: absolute;
+    top: -40px;
+
+}
+
+footer .column{
+    height: 90%;
+    width: 200px;
+    padding: 20px 30px;
+}
+
+footer h3{
+    display: flex;
+    align-items: center;
+
+}
+
+footer h3 img{
+    height: 50px;
+    width: 50px;
+
+}
+
+
+
+footer .icons{
+    display: flex;
+}
+
+footer .icons img{
+    height: 50px;
+    width: 50px;
+}
+
+footer .column ul{
+    list-style: none;
+}
+
+footer .column ul a{
+    text-decoration: none;
+}
