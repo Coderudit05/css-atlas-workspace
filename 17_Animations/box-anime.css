@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, rgb(229, 231, 235), rgb(156, 163, 175), rgb(75, 85, 99));
+    padding: 20px;
+
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    background: linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(234, 179, 8));
+    border-radius: 10px;
+    position: absolute;
+    
+    animation-name: box-anime;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes box-anime {
+    0% {
+        top: 0;
+        left: 0;
+    }
+
+    25% {
+        top: 0;
+        left: 80%;
+    }
+
+    50% {
+        top: 80%;
+        left: 80%;
+    }
+
+    75% {
+        top: 80%;
+        left: 0;
+    }
+
+    100% {
+        top: 0;
+        left: 0;
+    }
+}

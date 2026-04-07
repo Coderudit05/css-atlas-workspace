@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      .main {
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(
+          to right,
+          rgb(229, 231, 235),
+          rgb(156, 163, 175),
+          rgb(75, 85, 99)
+        );
+
+        padding: 20px 40px;
+      }
+      .ball {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background: linear-gradient(
+          to right,
+          rgb(236, 72, 153),
+          rgb(239, 68, 68),
+          rgb(234, 179, 8)
+        );
+        /* animation-name: ball-anime;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate; */
+        
+        animation: ball-anime 1s linear 3 alternate ;
+
+      }
+
+      @keyframes ball-anime {
+        0% {
+          transform: translate(0, 0) rotate(0deg);
+        }
+        100% {
+          transform: translate(800px, 300px) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
