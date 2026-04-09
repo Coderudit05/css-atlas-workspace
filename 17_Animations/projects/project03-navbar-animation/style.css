@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #111;
+    /* color: white; */
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ddd;
+    padding: 20px 40px;
+}
+
+#logo {
+    animation: logo-anime 0.9s;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    animation: nav-links-anime 2s;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-btns {
+    display: flex;
+    gap: 20px;
+    animation: nav-btns-anime 3s;
+}
+
+.nav-btns button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav-btns button:nth-child(1) {
+    background-color: indianred;
+    border: none;
+    color: white;
+
+}
+
+.nav-btns button:nth-child(2) {
+    background-color: transparent;
+    border: 2px solid indianred;
+}
+
+@keyframes logo-anime {
+    0% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes nav-links-anime {
+
+    0% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes nav-btns-anime {
+    0% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

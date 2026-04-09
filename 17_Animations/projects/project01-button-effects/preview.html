@@ -65,8 +65,7 @@
       }
 
       @keyframes wobble {
-        0%,
-        100% {
+        0% {
           transform: translateX(0%);
         }
 
@@ -88,6 +87,10 @@
 
         75% {
           transform: translateX(-5%) rotate(-1deg);
+        }
+
+        100% {
+          transform: translateX(0%);
         }
       }
 
@@ -123,11 +126,11 @@
       .btn-rotate-3d {
         background-color: #f39c12;
         color: white;
-        perspective: 300px;
+        perspective: 1000px;
       }
 
       .btn-rotate-3d:hover {
-        animation: rotate3d 0.7s;
+        animation: rotate3d 0.7s linear alternate;
       }
 
       @keyframes rotate3d {
