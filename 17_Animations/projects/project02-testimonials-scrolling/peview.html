@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      .testimonials-section {
+        min-height: 100vh;
+        background-color: #111;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      h2 {
+        text-align: center;
+        color: #ddd;
+        font-size: 3rem;
+      }
+
+      p {
+        color: rgba(255, 255, 255, 0.511);
+        max-width: 600px;
+        text-align: center;
+        margin: 20px auto;
+        text-transform: uppercase;
+      }
+
+      .testimonials-tracker {
+        height: 400px;
+        width: 100%;
+        background-color: #111;
+        overflow: hidden;
+      }
+
+      .anime-box {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        animation: scroll 20s linear infinite;
+        gap: 30px;
+        padding: 0 60px;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* ── Card Base ───────────────────────── */
+      .testimonial {
+        height: 300px;
+        width: 260px;
+        flex-shrink: 0;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* ── Card Image ─────────────────────── */
+      .testimonial img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* ── Dark Gradient Overlay ──────────── */
+      .testimonial .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.95) 0%,
+          rgba(0, 0, 0, 0.3) 55%,
+          transparent 100%
+        );
+      }
+
+      /* ── Text Content ───────────────────── */
+      .testimonial .content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 18px;
+      }
+
+      .testimonial .stars {
+        color: #f59e0b;
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-bottom: 8px;
+      }
+
+      .testimonial .review {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 12px;
+        line-height: 1.6;
+        font-style: italic;
+        margin-bottom: 12px;
+        text-transform: none;
+        text-align: left;
+        max-width: 100%;
+      }
+
+      .testimonial .divider {
+        width: 28px;
+        height: 1px;
+        background: #f59e0b;
+        margin-bottom: 10px;
+      }
+
+      .testimonial .name {
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        text-align: left;
+        text-transform: none;
+        margin: 0;
+        max-width: 100%;
+      }
+
+      .testimonial .role {
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        text-align: left;
+        margin: 4px 0 0 0;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="testimonials-section">
+      <h2>Our Testimonials</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio placeat
+        ipsam quis repudiandae distinctio beatae, fuga asperiores sed fugiat
+        cumque.
+      </p>
+
+      <div class="testimonials-tracker">
+        <div class="anime-box">
+          <!-- ── Original 8 Cards ── -->
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ★</div>
+              <p class="review">
+                "Absolutely unforgettable night. The energy was beyond anything
+                I have ever experienced."
+              </p>
+              <div class="divider"></div>
+              <p class="name">Sarah Johnson</p>
+              <p class="role">Music Producer</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ★</div>
+              <p class="review">
+                "Best festival I have attended in years. World class sound and
+                an amazing crowd."
+              </p>
+              <div class="divider"></div>
+              <p class="name">James Carter</p>
+              <p class="role">DJ & Artist</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ★</div>
+              <p class="review">
+                "Every moment felt magical. Already counting days for next
+                year's event."
+              </p>
+              <div class="divider"></div>
+              <p class="name">Emily Ross</p>
+              <p class="role">Blogger</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ☆</div>
+              <p class="review">
+                "Incredible lineup and perfect venue. The whole team did an
+                outstanding job."
+              </p>
+              <div class="divider"></div>
+              <p class="name">Marcus Lee</p>
+              <p class="role">Event Manager</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ★</div>
+              <p class="review">
+                "Came alone, left with so many memories and new friends. Truly
+                special."
+              </p>
+              <div class="divider"></div>
+              <p class="name">Priya Sharma</p>
+              <p class="role">Photographer</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ★</div>
+              <p class="review">
+                "The production quality was insane. Every stage had its own vibe
+                and energy."
+              </p>
+              <div class="divider"></div>
+              <p class="name">David Kim</p>
+              <p class="role">Sound Engineer</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ★</div>
+              <p class="review">
+                "Three days of pure joy. The food, music and atmosphere were all
+                world class."
+              </p>
+              <div class="divider"></div>
+              <p class="name">Nina Patel</p>
+              <p class="role">Travel Writer</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ★</div>
+              <p class="review">
+                "I have been to many festivals but Festava Live stands on a
+                completely different level."
+              </p>
+              <div class="divider"></div>
+              <p class="name">Alex Turner</p>
+              <p class="role">Music Critic</p>
+            </div>
+          </div>
+
+          <!-- ── Duplicate 8 Cards (same as above) ── -->
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ★</div>
+              <p class="review">
+                "Absolutely unforgettable night. The energy was beyond anything
+                I have ever experienced."
+              </p>
+              <div class="divider"></div>
+              <p class="name">Sarah Johnson</p>
+              <p class="role">Music Producer</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ★</div>
+              <p class="review">
+                "Best festival I have attended in years. World class sound and
+                an amazing crowd."
+              </p>
+              <div class="divider"></div>
+              <p class="name">James Carter</p>
+              <p class="role">DJ & Artist</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ★</div>
+              <p class="review">
+                "Every moment felt magical. Already counting days for next
+                year's event."
+              </p>
+              <div class="divider"></div>
+              <p class="name">Emily Ross</p>
+              <p class="role">Blogger</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ☆</div>
+              <p class="review">
+                "Incredible lineup and perfect venue. The whole team did an
+                outstanding job."
+              </p>
+              <div class="divider"></div>
+              <p class="name">Marcus Lee</p>
+              <p class="role">Event Manager</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ★</div>
+              <p class="review">
+                "Came alone, left with so many memories and new friends. Truly
+                special."
+              </p>
+              <div class="divider"></div>
+              <p class="name">Priya Sharma</p>
+              <p class="role">Photographer</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ★</div>
+              <p class="review">
+                "The production quality was insane. Every stage had its own vibe
+                and energy."
+              </p>
+              <div class="divider"></div>
+              <p class="name">David Kim</p>
+              <p class="role">Sound Engineer</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <div class="stars">★ ★ ★ ★ ★</div>
+              <p class="review">
+                "Three days of pure joy. The food, music and atmosphere were all
+                world class."
+              </p>
+              <div class="divider"></div>
+              <p class="name">Nina Patel</p>
+              <p class="role">Travel Writer</p>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <img
+              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80"
+              alt=""
+            />
+            <div class="overlay"></div>
+            <div class="content">
+              <p class="review">
+                "I have been to many festivals but Festava Live stands on a
+                completely different level."
+              </p>
+              <div class="divider"></div>
+              <p class="name">Alex Turner</p>
+              <p class="role">Music Critic</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
