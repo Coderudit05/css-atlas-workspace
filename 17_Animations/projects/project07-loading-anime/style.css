@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: gray;
+}
+
+.box{
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .spinner{
+    height: 80px;
+    width: 80px;
+    border: 5px solid rgba(128, 128, 128, 0.486);
+    
+    border-top: 5px solid blue;
+    border-radius: 50%;
+
+    animation: scroll-anime 1s linear infinite;
+}
+
+@keyframes scroll-anime {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
