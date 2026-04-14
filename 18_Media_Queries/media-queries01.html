@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      section {
+        height: 100%;
+        width: 100%;
+        background-color: aquamarine;
+
+        display: flex;
+        align-items: center;
+      }
+
+      .box {
+        height: 50%;
+        width: 100%;
+        background-color: tomato;
+      }
+
+      /* Media queries  */
+
+      @media (max-width: 1200px) {
+        .box {
+          background-color: orange;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .box {
+          background-color: red;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .box {
+          background-color: blue;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .box {
+          background-color: yellowgreen;
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="box"></div>
+    </section>
+  </body>
+</html>

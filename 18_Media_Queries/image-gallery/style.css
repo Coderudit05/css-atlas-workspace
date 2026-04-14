@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+    padding: 10px 30px;
+}
+
+
+header h1 {
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: indigo;
+    transition: all 0.3s linear;
+    position: relative;
+    font-size: 20px;
+}
+
+nav a::before {
+    content: '';
+    height: 2px;
+    width: 0%;
+    position: absolute;
+    background-color: red;
+
+    bottom: 0;
+    left: 0;
+
+    transition: width 0.3s ease-in-out;
+}
+
+
+
+nav a:hover {
+    color: red;
+}
+
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.nav-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-btns button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.nav-btns button:nth-child(1) {
+    background: linear-gradient(to right, rgb(236, 72, 153), rgb(239, 68, 68), rgb(234, 179, 8));
+    color: white;
+}
+
+.nav-btns button:nth-child(2) {
+    border: 2px solid brown;
+}
+
+#menu-icon{
+    display: none;
+}
+
+
+
+/* From here we are starting our image gallery section */
+
+.image-gallery {
+    display: flex;
+    padding: 20px 40px;
+    max-width: 90%;
+    margin: 20px auto;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.image-gallery .img-card {
+    height: 250px;
+    width: 300px;
+
+    position: relative;
+    cursor: pointer;
+
+    transition: all 0.3s linear;
+}
+
+.img-card img {
+    height: 100%;
+    width: 100%;
+    
+}
+
+.image-gallery .img-card:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px black;
+}
+
+.img-card .img-card-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    color: white;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 20px 30px;
+    
+    display: none;
+
+    transition: display 0.8s linear;
+}
+
+.img-card:hover .img-card-text{
+    display: block;
+}
+
+
+
+/* media queries */
+
+/* @media (max-width : 480px) {
+
+    nav{
+        display: none;
+    }
+
+    .nav-btns{
+        display: none;
+    }
+
+    #menu-icon{
+        display: flex;
+    }
+    
+} */
+
+
+@media (max-width : 768px) {
+
+    nav{
+        display: none;
+    }
+
+    .nav-btns{
+        display: none;
+    }
+
+    #menu-icon{
+        display: flex;
+    }
+    
+}
