@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+header {
+    /* background-color: yellowgreen; */
+    border-bottom: 2px solid rgba(128, 128, 128, 0.532);
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.nav-wrapper {
+    /* background-color: rgba(255, 166, 0, 0.526); */
+
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+
+    padding: 15px 20px;
+
+}
+
+.nav-wrapper h2{
+    display: flex;
+    align-items: center;
+}
+
+.nav-wrapper nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-btns button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+#signin {
+    border: 2px solid purple;
+    background-color: transparent;
+}
+
+#free-trial {
+    border: none;
+    background: linear-gradient(to right, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248));
+    color: white;
+}
+
+
+.menu-icon{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+
+    display: none;
+}
+
+
+
+/* from here we are making navbar responsive */
+
+@media (max-width:768px) {
+
+    #nav-links{
+        display: none;
+    }
+
+    .nav-btns{
+        display: none;
+    }
+
+    .menu-icon{
+        display: flex;
+    }
+}
