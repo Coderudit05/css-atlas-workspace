@@ -29,10 +29,11 @@ header {
     justify-content: space-between;
 
     padding: 15px 20px;
+    height: 70px;
 
 }
 
-.nav-wrapper h2{
+.nav-wrapper h2 {
     display: flex;
     align-items: center;
 }
@@ -74,7 +75,7 @@ nav a {
 }
 
 
-.menu-icon{
+.menu-icon {
     display: flex;
     align-items: center;
     font-size: 30px;
@@ -88,15 +89,159 @@ nav a {
 
 @media (max-width:768px) {
 
-    #nav-links{
+    #nav-links {
         display: none;
     }
 
-    .nav-btns{
+    .nav-btns {
         display: none;
     }
 
-    .menu-icon{
+    .menu-icon {
         display: flex;
+    }
+}
+
+
+/* From here we are making the hero section */
+
+.hero-section {
+    min-height: calc(100vh - 70px);
+    background-color: #F8F3FB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.hero-wrapper .left-box {
+    /* background-color: aquamarine; */
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding-top: 50px;
+    padding-left: 100px;
+}
+
+.hero-wrapper .left-box h1 {
+    font-size: 4rem;
+    line-height: 60px;
+    font: bolder;
+
+    max-width: 70%;
+
+    /* background-color: yellowgreen; */
+    min-width: 400px;
+}
+
+.hero-wrapper .left-box p {
+    font-size: 20px;
+    max-width: 500px;
+}
+
+.hero-wrapper .hero-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-wrapper .left-box .hero-btn {
+    border: none;
+    background: linear-gradient(to right, rgb(249, 168, 212), rgb(216, 180, 254), rgb(129, 140, 248));
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hero-wrapper .right-box img {
+    height: 500px;
+}
+
+
+@media (max-width:1024px) {
+    .hero-wrapper {
+        flex-direction: column;
+    }
+
+    .hero-wrapper .left-box {
+        padding: 40px;
+    }
+
+    .hero-wrapper h1 {
+        text-align: center;
+        /* background-color: yellowgreen; */
+        margin: 0px auto;
+    }
+
+    .hero-wrapper p {
+        text-align: center;
+        margin: 0px auto;
+    }
+
+    .hero-links {
+        margin: 0px auto;
+    }
+
+
+}
+
+@media (max-width:540px) {
+
+    .hero-wrapper .right-box img {
+        height: 300px;
+    }
+
+    .hero-wrapper .left-box h1 {
+        min-width: 300px;
+        font-size: 3rem;
+        /* background-color: blue; */
+    }
+}
+
+
+/* Creating the hero-brands section */
+
+.hero-brands {
+    overflow-x: hidden;
+    /* background-color: yellowgreen; */
+    width: 100%;
+}
+
+.tracker {
+    display: flex;
+    gap: 40px;
+
+    animation-name: brands-anime;
+    animation-duration: 15s;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.tracker img {
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+
+}
+
+@keyframes brands-anime {
+
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+
     }
 }
